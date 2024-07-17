@@ -26,7 +26,7 @@
             #binding-cells = <0>;
             bindings = <&to DEFAULT>, <&to GAME_LAYER>;
 
-            mods = <(MOD_ESC)>;
+            mods = <(ESC)>;
         };
 
         lr_upg: layer_down {
@@ -34,7 +34,7 @@
             #binding-cells = <0>;
             bindings = <&to GAME_LAYER>, <&to DEFAULT>;
 
-            mods = <(MOD_ESC)>;
+            mods = <(ESC)>;
         };
     };
 
