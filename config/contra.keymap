@@ -21,7 +21,7 @@
             bindings = <&kp ESC>, <&kp CAPS>;
         };
 
-        td_ESC_grave: tap_dance_0 {
+        td_ESC_grave: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
