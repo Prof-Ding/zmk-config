@@ -50,10 +50,10 @@
 
         default_layer {
             bindings = <
-&td_ESC    &kp Q       &kp W       &kp E         &kp R        &kp T      &kp Y   &kp U         &kp I         &kp O       &kp P          &kp BSPC
-&kp TAB    &mt LGUI A  &mt LALT S  &mt LSHIFT D  &mt LCTRL F  &kp G      &kp H   &mt RCTRL J   &mt RSHIFT K  &mt LALT L  &mt RGUI SEMI  &kp SQT
-&kp LSHFT  &kp Z       &kp X       &kp C         &kp V        &kp B      &kp N   &kp M         &kp COMMA     &kp DOT     &kp FSLH       &kp ENTER
-&kp HOME   &kp PG_DN   &kp PG_UP   &kp END       &lr_up       &kp SPACE  &SPACE  &mo NUM_MODS  &kp LEFT      &kp DOWN    &kp UP         &kp RIGHT
+&td_ESC    &kp Q       &kp W       &kp E         &kp R        &kp T      &kp Y      &kp U         &kp I         &kp O       &kp P          &kp BSPC
+&kp TAB    &mt LGUI A  &mt LALT S  &mt LSHIFT D  &mt LCTRL F  &kp G      &kp H      &mt RCTRL J   &mt RSHIFT K  &mt LALT L  &mt RGUI SEMI  &kp SQT
+&kp LSHFT  &kp Z       &kp X       &kp C         &kp V        &kp B      &kp N      &kp M         &kp COMMA     &kp DOT     &kp FSLH       &kp ENTER
+&kp HOME   &kp PG_DN   &kp PG_UP   &kp END       &lr_up       &kp SPACE  &kp SPACE  &mo NUM_MODS  &kp LEFT      &kp DOWN    &kp UP         &kp RIGHT
             >;
         };
 
@@ -78,9 +78,9 @@
         game_num {
             bindings = <
 &td_ESC_grave  &kp N1    &kp N2    &kp N3      &kp N4   &kp N5     &kp N6   &kp N7        &kp N8     &kp N9     &kp N0    &kp DEL
-&kp TAB    &kp F1    &kp F2    &kp F3      &kp F4   &kp F5     &kp F6   &kp MINUS     &kp PG_UP  &kp LBKT   &kp RBKT  &kp BSLH
-&kp LSHFT  &kp F7    &kp F8    &kp F9      &kp F10  &kp F11    &kp F12  &kp EQUAL     &kp PG_DN  &kp HOME   &kp END   &kp ENTER
-&kp LCTRL  &kp LGUI  &kp LALT  &sys_reset  &lr_upg  &kp SPACE  &trans   &to lr_upg  &kp LEFT   &kp RIGHT  &kp UP    &kp DOWN
+&kp TAB        &kp F1    &kp F2    &kp F3      &kp F4   &kp F5     &kp F6   &kp MINUS     &kp PG_UP  &kp LBKT   &kp RBKT  &kp BSLH
+&kp LSHFT      &kp F7    &kp F8    &kp F9      &kp F10  &kp F11    &kp F12  &kp EQUAL     &kp PG_DN  &kp HOME   &kp END   &kp ENTER
+&kp LCTRL      &kp LGUI  &kp LALT  &sys_reset  &lr_upg  &kp SPACE  &trans   &to lr_upg    &kp LEFT   &kp RIGHT  &kp UP    &kp DOWN
             >;
         };
     };
