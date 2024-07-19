@@ -33,7 +33,7 @@
             #binding-cells = <0>;
             bindings = <&to DEFAULT>, <&to GAME_LAYER>;
 
-            mods = <(ESC)>;
+            mods = <(MOD_LSFT)>;
         };
 
         lr_upg: layer_up_game_mode {
@@ -41,7 +41,7 @@
             #binding-cells = <0>;
             bindings = <&mo GAME_NUM>, <&to DEFAULT>;
 
-            mods = <(ESC)>;
+            mods = <(MOD_LSFT)>;
         };
     };
 
