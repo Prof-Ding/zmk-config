@@ -31,7 +31,7 @@
         lr_up: layer_up {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&to DEFAULT>, <&to GAME_LAYER>;
+            bindings = <&to 0>, <&to 2>;
 
             mods = <(MOD_LSFT)>;
         };
@@ -39,7 +39,7 @@
         lr_upg: layer_up_game_mode {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&mo GAME_NUM>, <&to DEFAULT>;
+            bindings = <&mo 0>, <&to 0>;
 
             mods = <(MOD_LSFT)>;
         };
@@ -50,37 +50,28 @@
 
         default_layer {
             bindings = <
-&kp ESC    &kp Q         &kp W         &kp E      &kp R   &kp T      &kp Y      &kp U         &kp I      &kp O           &kp P          &kp BSPC
-&kp TAB    &kp A         &kp S         &kp D      &kp F   &kp G      &kp H      &kp J         &kp K      &kp L           &kp SEMICOLON  &kp SQT
-&kp LSHFT  &kp Z         &kp X         &kp C      &kp V   &kp B      &kp N      &kp M         &kp COMMA  &kp DOT         &kp UP_ARROW   &kp ENTER
-&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &kp MINUS  &lr_up  &kp SPACE  &kp SPACE  &mo NUM_MODS  &kp SLASH  &kp LEFT_ARROW  &kp DOWN       &kp RIGHT
+&kp ESC    &kp Q         &kp W         &kp E      &kp R  &kp T      &kp Y      &kp U  &kp I      &kp O           &kp P          &kp BSPC
+&kp TAB    &kp A         &kp S         &kp D      &kp F  &kp G      &kp H      &kp J  &kp K      &kp L           &kp SEMICOLON  &kp SQT
+&kp LSHFT  &kp Z         &kp X         &kp C      &kp V  &kp B      &kp N      &kp M  &kp COMMA  &kp DOT         &kp UP_ARROW   &kp ENTER
+&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &kp MINUS  &mo 2  &kp SPACE  &kp SPACE  &mo 1  &kp SLASH  &kp LEFT_ARROW  &kp DOWN       &kp RIGHT
             >;
         };
 
         num_mods {
             bindings = <
-&kp GRAVE  &kp N1    &kp N2    &kp N3      &kp N4   &kp N5     &kp N6   &kp N7        &kp N8     &kp N9     &kp N0    &kp DEL
-&kp TAB    &kp F1    &kp F2    &kp F3      &kp F4   &kp F5     &kp F6   &kp MINUS     &kp PG_UP  &kp LBKT   &kp RBKT  &kp BSLH
-&kp LSHFT  &kp F7    &kp F8    &kp F9      &kp F10  &kp F11    &kp F12  &kp EQUAL     &kp PG_DN  &kp HOME   &kp END   &kp ENTER
-&kp LCTRL  &kp LGUI  &kp LALT  &sys_reset  &lr_up   &kp SPACE  &trans   &to NUM_MODS  &kp LEFT   &kp RIGHT  &kp UP    &kp DOWN
+&kp GRAVE  &kp N1    &kp N2    &kp N3      &kp N4   &kp N5     &kp N6   &kp N7     &kp N8     &kp N9     &kp N0    &kp DEL
+&kp TAB    &kp F1    &kp F2    &kp F3      &kp F4   &kp F5     &kp F6   &kp MINUS  &kp PG_UP  &kp LBKT   &kp RBKT  &kp BSLH
+&kp LSHFT  &kp F7    &kp F8    &kp F9      &kp F10  &kp F11    &kp F12  &kp EQUAL  &kp PG_DN  &kp HOME   &kp END   &kp ENTER
+&kp LCTRL  &kp LGUI  &kp LALT  &sys_reset  &lr_up   &kp SPACE  &trans   &to 1      &kp LEFT   &kp RIGHT  &kp UP    &kp DOWN
             >;
         };
 
         game_layer {
             bindings = <
-&kp TAB    &kp Q     &kp W     &kp E     &kp R         &kp T      &kp Y      &kp U         &kp I      &kp O      &kp P     &kp BSPC
-&kp TAB    &kp A     &kp S     &kp D     &kp F         &kp G      &kp H      &kp J         &kp K      &kp L      &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z     &kp X     &kp C     &kp V         &kp B      &kp N      &kp M         &kp COMMA  &kp DOT    &kp FSLH  &kp ENTER
-&kp LCTRL  &kp LGUI  &kp LALT  &kp BSLH  &mo GAME_NUM  &kp SPACE  &kp SPACE  &mo GAME_NUM  &kp LEFT   &kp RIGHT  &kp UP    &kp DOWN
-            >;
-        };
-
-        game_num {
-            bindings = <
-&td_ESC_grave  &kp N1    &kp N2    &kp N3      &kp N4   &kp N5     &kp N6   &kp N7     &kp N8     &kp N9     &kp N0    &kp DEL
-&kp TAB        &kp F1    &kp F2    &kp F3      &kp F4   &kp F5     &kp F6   &kp MINUS  &kp PG_UP  &kp LBKT   &kp RBKT  &kp BSLH
-&kp LSHFT      &kp F7    &kp F8    &kp F9      &kp F10  &kp F11    &kp F12  &kp EQUAL  &kp PG_DN  &kp HOME   &kp END   &kp ENTER
-&kp LCTRL      &kp LGUI  &kp LALT  &sys_reset  &lr_upg  &kp SPACE  &trans   &lr_upg    &kp LEFT   &kp RIGHT  &kp UP    &kp DOWN
+&kp TAB    &kp Q     &kp W     &kp E     &kp R  &kp T      &kp Y      &kp U  &kp I      &kp O      &kp P     &kp BSPC
+&kp TAB    &kp A     &kp S     &kp D     &kp F  &kp G      &kp H      &kp J  &kp K      &kp L      &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z     &kp X     &kp C     &kp V  &kp B      &kp N      &kp M  &kp COMMA  &kp DOT    &kp FSLH  &kp ENTER
+&kp LCTRL  &kp LGUI  &kp LALT  &kp BSLH  &mo 0  &kp SPACE  &kp SPACE  &mo 0  &kp LEFT   &kp RIGHT  &kp UP    &kp DOWN
             >;
         };
     };
