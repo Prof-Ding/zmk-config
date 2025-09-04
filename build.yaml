@@ -18,5 +18,6 @@
 #
 ---
 include:
-  - board: mikoto
+  - board: nice_nano_v2
+#  - board: mikoto
     shield: contra
