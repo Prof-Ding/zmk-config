@@ -44,6 +44,30 @@
         };
     };
 
+    macros {
+        Macro1: Macro1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp N6 &kp N0 &kp N1 &kp N7 &kp N1 &kp N5 &kp N7 &kp N5>;
+            label = "MACRO1";
+        };
+
+        Macro2: Macro2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(S) &kp P &kp R &kp I &kp N &kp G &kp N2 &kp N0 &kp N2 &kp N5 &kp RET>;
+            label = "MACRO2";
+        };
+
+        Degrees: Degrees {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>, <&macro_press>;
+
+            label = "DEGREES";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -58,10 +82,10 @@
 
         NUM {
             bindings = <
-&kp GRAVE  &kp N1    &kp N2    &kp N3      &kp N4   &kp N5     &kp N6   &kp N7     &kp N8     &kp N9     &kp N0    &kp DEL
-&kp TAB    &kp F1    &kp F2    &kp F3      &kp F4   &kp F5     &kp F6   &kp MINUS  &kp PG_UP  &kp LBKT   &kp RBKT  &kp BSLH
-&kp LSHFT  &kp F7    &kp F8    &kp F9      &kp F10  &kp F11    &kp F12  &kp EQUAL  &kp PG_DN  &kp HOME   &kp END   &kp ENTER
-&kp LCTRL  &kp LGUI  &kp LALT  &sys_reset  &lr_up   &kp SPACE  &trans   &to 1      &kp LEFT   &kp RIGHT  &kp UP    &kp DOWN
+&kp GRAVE  &kp N1    &kp N2    &kp N3      &kp N4   &kp N5     &kp N6     &kp N7     &kp N8     &kp N9          &kp N0          &kp DEL
+&kp TAB    &kp F1    &kp F2    &kp F3      &kp F4   &kp F5     &kp F6     &kp MINUS  &kp PG_UP  &kp LBKT        &kp RBKT        &kp BSLH
+&kp LSHFT  &kp F7    &kp F8    &kp F9      &kp F10  &kp F11    &kp F12    &kp EQUAL  &kp PG_DN  &kp HOME        &kp UP_ARROW    &kp ENTER
+&kp LCTRL  &kp LGUI  &kp LALT  &sys_reset  &lr_up   &kp SPACE  &kp SPACE  &to 1      &kp LEFT   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
             >;
         };
 
