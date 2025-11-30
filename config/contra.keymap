@@ -55,7 +55,7 @@
         Macro2: Macro2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LS(S) &kp P &kp R &kp I &kp N &kp G &kp N2 &kp N0 &kp N2 &kp N5 &kp RET>;
+            bindings = <&none &kp LS(S) &kp U &kp M &kp M &kp E &kp R &kp N2 &kp N0 &kp N2 &kp N5 &kp RET>;
             label = "MACRO2";
         };
 
